@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ScherpModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AcademicSession">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Session" Type="varchar" MaxLength="20" />
+    <Property Name="Term" Type="varchar" MaxLength="20" />
+    <Property Name="Year" Type="varchar" MaxLength="20" />
+    <Property Name="TermBegins" Type="varchar" MaxLength="50" />
+    <Property Name="TermEnds" Type="varchar" MaxLength="50" />
+    <Property Name="SchoolOpens" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedAt" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="UpdatedAt" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="CommunicationDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Phone1" Type="varchar" MaxLength="20" />
+    <Property Name="Phone2" Type="varchar" MaxLength="20" />
+    <Property Name="CreatedAt" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="UpdatedAt" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="ParentDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentId" Type="int" Nullable="false" />
+    <Property Name="FatherName" Type="varchar" MaxLength="250" />
+    <Property Name="MotherName" Type="varchar" MaxLength="250" />
+    <Property Name="FatherOccupation" Type="varchar" MaxLength="50" />
+    <Property Name="MotherOccupation" Type="varchar" MaxLength="50" />
+    <Property Name="FatherOfficeAddress" Type="varchar" MaxLength="200" />
+    <Property Name="MotherOfficeAddress" Type="nchar" MaxLength="10" />
+    <Property Name="FofficePhone1" Type="varchar" MaxLength="20" />
+    <Property Name="MofficePhone1" Type="varchar" MaxLength="20" />
+    <Property Name="FofficePhone2" Type="varchar" MaxLength="20" />
+    <Property Name="MofficePhone2" Type="varchar" MaxLength="20" />
+    <Property Name="UpdatedAt" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedAt" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="SchoolDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" />
+    <Property Name="Slogan" Type="varchar" MaxLength="250" />
+    <Property Name="Addres" Type="varchar" MaxLength="250" />
+    <Property Name="Phones" Type="varchar" MaxLength="50" />
+    <Property Name="WebAddress" Type="varchar" MaxLength="150" />
+    <Property Name="Email" Type="varchar" MaxLength="150" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="EdZone" Type="varchar" MaxLength="50" />
+    <Property Name="dateFounded" Type="varchar" MaxLength="50" />
+    <Property Name="Logo" Type="image" />
+    <Property Name="Bannar" Type="image" />
+    <Property Name="CreatedAt" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="UpdatedAt" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="StaffProfile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="20" />
+    <Property Name="Fullname" Type="varchar" MaxLength="50" />
+    <Property Name="Dob" Type="datetime" />
+    <Property Name="Gender" Type="varchar" MaxLength="20" />
+    <Property Name="Soo" Type="varchar" MaxLength="50" />
+    <Property Name="Nationality" Type="varchar" MaxLength="20" />
+    <Property Name="Address" Type="varchar(max)" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="Phone1" Type="varchar" MaxLength="20" />
+    <Property Name="UpdatedAt" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="Avatar" Type="image" />
+    <Property Name="StaffType" Type="varchar" MaxLength="20" />
+    <Property Name="CreatedAt" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="StudentAdmission">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PreAdmissionId" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedAt" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="UpdatedAt" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="StudentClass">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Class" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ClassGroup" Type="varchar" MaxLength="20" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StudentPreAdmission">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="OtherNames" Type="varchar" MaxLength="50" />
+    <Property Name="Surname" Type="varchar" MaxLength="50" />
+    <Property Name="Dob" Type="date" />
+    <Property Name="Gender" Type="int" />
+    <Property Name="Soo" Type="int" />
+    <Property Name="Nationality" Type="varchar" MaxLength="150" />
+    <Property Name="Avatar" Type="image" />
+  </EntityType>
+  <EntityType Name="studentProfile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Surname" Type="varchar" MaxLength="50" />
+    <Property Name="OtherNames" Type="varchar" MaxLength="50" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" />
+    <Property Name="Dob" Type="date" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" />
+    <Property Name="Soo" Type="int" />
+    <Property Name="Nationality" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedAt" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="UpdatedAt" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="Avatar" Type="image" />
+  </EntityType>
+  <EntityType Name="StudyHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="term" Type="varchar" MaxLength="20" />
+    <Property Name="class" Type="varchar" MaxLength="10" />
+    <Property Name="classTeacher" Type="varchar" MaxLength="10" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+    <Property Name="studyYear" Type="varchar" MaxLength="10" />
+    <Property Name="studySession" Type="varchar" MaxLength="10" />
+    <Property Name="studyHistoryKey" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ScherpModelStoreContainer">
+    <EntitySet Name="AcademicSession" EntityType="Self.AcademicSession" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommunicationDetails" EntityType="Self.CommunicationDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParentDetails" EntityType="Self.ParentDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SchoolDetails" EntityType="Self.SchoolDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StaffProfile" EntityType="Self.StaffProfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentAdmission" EntityType="Self.StudentAdmission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentClass" EntityType="Self.StudentClass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentPreAdmission" EntityType="Self.StudentPreAdmission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="studentProfile" EntityType="Self.studentProfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudyHistory" EntityType="Self.StudyHistory" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

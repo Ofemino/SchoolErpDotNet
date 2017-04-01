@@ -5,12 +5,9 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="ScherpModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'Scherp.dbo.AcademicSession' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="AcademicSession">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="CreatedAt" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Session" Type="varchar" MaxLength="20" />
@@ -169,6 +166,7 @@ warning 6002: The table/view 'Scherp.dbo.AcademicSession' does not have a primar
           <Property Name="studyHistoryKey" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityContainer Name="ScherpModelStoreContainer">
+          <EntitySet Name="AcademicSession" EntityType="Self.AcademicSession" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CommunicationDetails" EntityType="Self.CommunicationDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ParentDetails" EntityType="Self.ParentDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SchoolDetails" EntityType="Self.SchoolDetails" Schema="dbo" store:Type="Tables" />
@@ -178,21 +176,6 @@ warning 6002: The table/view 'Scherp.dbo.AcademicSession' does not have a primar
           <EntitySet Name="StudentPreAdmission" EntityType="Self.StudentPreAdmission" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="studentProfile" EntityType="Self.studentProfile" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StudyHistory" EntityType="Self.StudyHistory" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AcademicSession" EntityType="Self.AcademicSession" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [AcademicSession].[Id] AS [Id], 
-    [AcademicSession].[Session] AS [Session], 
-    [AcademicSession].[Term] AS [Term], 
-    [AcademicSession].[Year] AS [Year], 
-    [AcademicSession].[TermBegins] AS [TermBegins], 
-    [AcademicSession].[TermEnds] AS [TermEnds], 
-    [AcademicSession].[SchoolOpens] AS [SchoolOpens], 
-    [AcademicSession].[CreatedBy] AS [CreatedBy], 
-    [AcademicSession].[CreatedAt] AS [CreatedAt], 
-    [AcademicSession].[UpdatedAt] AS [UpdatedAt], 
-    [AcademicSession].[UpdatedBy] AS [UpdatedBy]
-    FROM [dbo].[AcademicSession] AS [AcademicSession]</DefiningQuery>
-          </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -357,7 +340,6 @@ warning 6002: The table/view 'Scherp.dbo.AcademicSession' does not have a primar
         <EntityType Name="AcademicSession">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="CreatedAt" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Session" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />

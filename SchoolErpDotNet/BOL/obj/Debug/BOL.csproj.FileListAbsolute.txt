@@ -1,0 +1,9 @@
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BOL\bin\Debug\BOL.dll.config
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BOL\bin\Debug\BOL.dll
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BOL\bin\Debug\BOL.pdb
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BOL\bin\Debug\EntityFramework.dll
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BOL\bin\Debug\EntityFramework.SqlServer.dll
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BOL\bin\Debug\EntityFramework.xml
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BOL\bin\Debug\EntityFramework.SqlServer.xml
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BOL\obj\Debug\BOL.dll
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BOL\obj\Debug\BOL.pdb

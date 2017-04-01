@@ -1,0 +1,12 @@
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BLL\bin\Debug\BLL.dll.config
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BLL\bin\Debug\BLL.dll
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BLL\bin\Debug\BLL.pdb
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BLL\bin\Debug\BOL.dll
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BLL\bin\Debug\EntityFramework.dll
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BLL\bin\Debug\BOL.pdb
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BLL\bin\Debug\EntityFramework.xml
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BLL\obj\Debug\BLL.dll
+C:\MYPROJECTS\SchoolErpDotNet\SchoolErpDotNet\BLL\obj\Debug\BLL.pdb
